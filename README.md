@@ -4,7 +4,7 @@
 ## Project Participants
 1. Domraсhev Ivan, i.domrachev@innopolis.university
 2. Eremov Artur, a.eremov@innopolis.university
-3. Kisilev Ivan, i.kisilev@innopolis.university
+3. Kiselyov Ivan, i.kiselyov@innopolis.university
 
 ## Motivation
 The project is industry motivated, since this is very close to a real-life goal of one of the start-ups in the Innopolis University. The data from the model would be postprocessed and published to a navigation algorithm, which would allow to autonomous vehicle follow the person. The lidar is used for other means, and it would be fortunate if it would allow not to install the camera specifically for this task
