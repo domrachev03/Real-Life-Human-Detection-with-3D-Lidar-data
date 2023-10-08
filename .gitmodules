@@ -1,6 +1,3 @@
-[submodule "existing_models/KITTI_dataset/kitti_to_rosbag"]
-	path = existing_models/KITTI_dataset/kitti_to_rosbag
-	url = https://github.com/ethz-asl/kitti_to_rosbag
 [submodule "existing_models/Real-Life-Human-Detection-with-3D-Lidar-data"]
 	path = existing_models/Real-Life-Human-Detection-with-3D-Lidar-data
 	url = https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data.git
