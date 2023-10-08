@@ -1,1 +1,4 @@
 README.pdf
+**/dataset
+existing_models/nuScenes_dataset/nuScenes-lidarseg-mini-v1.0.tar.bz2
+existing_models/nuScenes_dataset/v1.0-mini.tgz
