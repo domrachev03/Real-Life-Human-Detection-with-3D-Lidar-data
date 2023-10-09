@@ -9,7 +9,7 @@
         args="0 0 0 0 0 0 1 map world 20" 
     /> 
 
-    <node pkg="rosbag" type="play" name="player" output="screen" args="-l --clock $(find lidar_tracker_validation)/lidar_rosbags/$(arg rosbag_filename)"/>
+    <node pkg="rosbag" type="play" name="player" output="screen" args="-q -l --clock $(find lidar_tracker_validation)/lidar_rosbags/$(arg rosbag_filename)"/>
     <include file="$(find LiDAR_Tracking_3D)/launch/Track_3D.launch">
         <arg name="input" value="$(arg lidar_pub_topic)"/>
     </include>

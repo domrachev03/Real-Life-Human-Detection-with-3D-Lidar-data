@@ -1,3 +1,6 @@
 [submodule "existing_models/LidarTracking3D/src/LiDAR_Tracking_3D"]
 	path = existing_models/LidarTracking3D/src/LiDAR_Tracking_3D
-	url = https://github.com/baberjunaid/LiDAR_Tracking_3D.git
+	url = https://github.com/domrachev03/LiDAR_Tracking_3D.git
+[submodule "existing_models/multiple-object-tracking-lidar"]
+	path = existing_models/multiple-object-tracking-lidar
+	url = https://github.com/praveen-palanisamy/multiple-object-tracking-lidar
