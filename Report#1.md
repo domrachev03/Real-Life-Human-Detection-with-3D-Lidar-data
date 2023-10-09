@@ -60,6 +60,7 @@ The main disadvantage of this approach is requirement of [structured pointcloud]
    * [Code](https://github.com/praveen-palanisamy/multiple-object-tracking-lidar)
 
 ![GIF](http://wiki.ros.org/multi_object_tracking_lidar?action=AttachFile&do=get&target=multi-object-tracking-lidar-demo.gif)
+
 This approach utilises K-D tree based pointcloud processing for object feature detection, then passes it to unsuprevised euclidean cluster extraction for segmentation and finally implements stable tracking with ensemble of Kalman filters.
 
 Despite great performance on the presented references, this model performed poorly on chosen KITTI samples. Also, the implementation does not provide clear way for configuring parameters.
