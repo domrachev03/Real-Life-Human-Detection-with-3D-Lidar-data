@@ -7,3 +7,18 @@
 [submodule "existing_models/LidarTracking3D/src/patchwork-plusplus-ros"]
 	path = existing_models/LidarTracking3D/src/patchwork-plusplus-ros
 	url = https://github.com/url-kaist/patchwork-plusplus-ros
+[submodule "existing_models/LidarTracking3D/src/hdl_people_tracking"]
+	path = existing_models/LidarTracking3D/src/hdl_people_tracking
+	url = https://github.com/koide3/hdl_people_tracking
+[submodule "existing_models/LidarTracking3D/src/hdl_people_tracking_dependencies/ndt_omp"]
+	path = existing_models/LidarTracking3D/src/hdl_people_tracking_dependencies/ndt_omp
+	url = https://github.com/koide3/ndt_omp
+[submodule "existing_models/LidarTracking3D/src/hdl_people_tracking_dependencies/hdl_localization"]
+	path = existing_models/LidarTracking3D/src/hdl_people_tracking_dependencies/hdl_localization
+	url = https://github.com/koide3/hdl_localization
+[submodule "existing_models/LidarTracking3D/src/hdl_people_tracking_dependencies/fast_gicp"]
+	path = existing_models/LidarTracking3D/src/hdl_people_tracking_dependencies/fast_gicp
+	url = https://github.com/SMRT-AIST/fast_gicp
+[submodule "existing_models/LidarTracking3D/src/hdl_people_tracking_dependencies/hdl_global_localization"]
+	path = existing_models/LidarTracking3D/src/hdl_people_tracking_dependencies/hdl_global_localization
+	url = https://github.com/koide3/hdl_global_localization
