@@ -10,9 +10,16 @@
     /> 
 
     <node pkg="rosbag" type="play" name="player" output="screen" args="-q -l --clock $(find lidar_tracker_validation)/lidar_rosbags/$(arg rosbag_filename)"/>
-    <include file="$(find LiDAR_Tracking_3D)/launch/Track_3D.launch">
-        <arg name="input" value="$(arg lidar_pub_topic)"/>
-    </include>
-    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find lidar_tracker_validation)/rviz/lidar_validation_scene.rviz"/>
 
+    <node name="ground_segmentation" pkg="patchworkpp" type="demo" output="screen">
+        <rosparam command="load" file="$(find patchworkpp)/config/params.yaml" />
+        <param name="cloud_topic" value="$(arg lidar_pub_topic)"/>
+    </node>
+    
+    <node name="object_tracking" type="kf_tracker" pkg="multi_object_tracking_lidar" output="screen">
+        <remap from="/filtered_cloud" to="/ground_segmentation/nonground"/>
+    </node>
+
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find lidar_tracker_validation)/rviz/lidar_validation_scene.rviz"/>
+    
 </launch>
