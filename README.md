@@ -23,11 +23,11 @@ The current hardware setup is following:
 Also, the Robotics Operating System (ROS) enviroment with other algorithms for autonomous navigation are already implements
 
 ## Roadmap
-- [ ] Designing a pipeline
-- [ ] Researching for existing solutions
+- [X] Designing a pipeline
+- [X] Researching for existing solutions
+- [X] Integrating a solution with ROS environment
 - [ ] Collecting the dataset
 - [ ] Implementing human detection pipeline
 - [ ] Implementing human following
-- [ ] Integrating a solution with ROS environment
 - [ ] Optimizing the performance
 
