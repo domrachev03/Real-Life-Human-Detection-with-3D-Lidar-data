@@ -8,7 +8,9 @@ Panels:
         - /Status1
         - /MarkerArray1
         - /Non-ground1
-        - /MarkerArray2/Status1
+        - /hdl_tracking1
+        - /Track3D1
+        - /kf_tracker1
       Splitter Ratio: 0.5
     Tree Height: 466
   - Class: rviz/Selection
@@ -28,7 +30,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: PointCloud2
+    SyncSource: Non-ground
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -160,8 +162,24 @@ Visualization Manager:
       Value: true
     - Class: rviz/MarkerArray
       Enabled: true
+      Marker Topic: /hdl_people_tracking_nodelet/markers
+      Name: hdl_tracking
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /lidar_tracking/centroids
+      Name: Track3D
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
       Marker Topic: /viz
-      Name: MarkerArray
+      Name: kf_tracker
       Namespaces:
         "": true
       Queue Size: 100
@@ -194,7 +212,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 20.42278480529785
+      Distance: 16.886825561523438
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -210,9 +228,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: -0.05520249158143997
+      Pitch: 0.4447977542877197
       Target Frame: <Fixed Frame>
-      Yaw: 1.5254050493240356
+      Yaw: 4.5954132080078125
     Saved: ~
 Window Geometry:
   Displays:
