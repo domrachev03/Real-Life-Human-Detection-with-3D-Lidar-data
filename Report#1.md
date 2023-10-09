@@ -27,7 +27,7 @@ We found a lot of datasets in the internet. Now we mainly use parts of KITTY and
 
 Based on [this](https://github.com/praveen-palanisamy/multiple-object-tracking-lidar/tree/27db548ea51d8faa498c9a2492b172219d6a56fb) project we made a ROS environment for us for visualizing all our data and for checking algorithms.
 
-![GIF](http://wiki.ros.org/multi_object_tracking_lidar?action=AttachFile&do=view&target=multi-object-tracking-lidar-demo.gif)
+![GIF](http://wiki.ros.org/multi_object_tracking_lidar?action=AttachFile&do=get&target=multi-object-tracking-lidar-demo.gif)
 
 ## Our first 3D CNN
 
