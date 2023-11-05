@@ -1,0 +1,57 @@
+<launch>
+    <node 
+        pkg="tf" 
+        type="static_transform_publisher" 
+        name="odom2camera" 
+        args="0.189 0.029 0 0 0 0 1 odom front_camera_link 20" 
+    />
+    
+    <node
+        pkg="tf"
+        type="static_transform_publisher"
+        name="base_to_velodyne"
+        args="0 0 0.03 0 0 0 base_link velodyne 20"  
+    />
+
+    <arg name="camera_fps" default="10"/>
+    <arg name="record_rosbag" default="false"/>
+
+    <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
+    <include file="$(find scout_bringup)/launch/scout_mini_robot_base.launch">
+	<arg name="pub_tf" value="true"/>
+    </include>
+    
+    <include file="$(find realsense2_camera)/launch/rs_t265.launch">
+        <arg name="device_type"         value="t265"/>
+        <arg name="camera"              value="front_camera"/>
+        <arg name="tf_prefix"           value="front_camera"/>
+
+        <arg name="fisheye_width"       value="848"/> 
+        <arg name="fisheye_height"      value="800"/>
+        <arg name="enable_fisheye1"     value="true"/>
+        <arg name="enable_fisheye2"     value="true"/>
+
+        <arg name="fisheye_fps"         value="$(arg camera_fps)"/>
+
+        <arg name="gyro_fps"            value="-1"/>
+        <arg name="accel_fps"           value="-1"/>
+        <arg name="enable_gyro"         value="false"/>
+        <arg name="enable_accel"        value="false"/>
+        <arg name="enable_pose"         value="false"/>
+
+        <arg name="enable_sync"           value="true"/>
+
+        <arg name="linear_accel_cov"      value="0.01"/>
+        <arg name="initial_reset"         value="false"/>
+        <arg name="reconnect_timeout"     value="6.0"/>
+        <arg name="unite_imu_method"      value=""/>
+
+        <arg name="publish_odom_tf"     value="true"/>
+    </include>
+    
+    <node pkg="human_detection" type="sync_msgs" name="filtered"/>
+    <node pkg="rosbag" type="record" name="rosbag_record"
+       args="record --repeat-latched -o $(find human_detection)/rosbags /tf /filtered/velodyne_points /filtered/fisheye1/image_raw /filtered/fisheye2/image_raw"
+       
+       if="$(arg record_rosbag)"/>
+</launch>

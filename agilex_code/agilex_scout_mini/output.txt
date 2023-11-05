@@ -1,0 +1,1479 @@
+... logging to /home/jetson/.ros/log/e4908b40-ef17-11ed-bf96-d7afea9861d1/roslaunch-nano-492336.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/jetson/agile_ws/src/agilex_scout_mini/launch/slam.launch
+[1mstarted roslaunch server http://10.100.21.115:38255/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /move_base/TebLocalPlannerROS/acc_lim_theta: 0.2
+ * /move_base/TebLocalPlannerROS/acc_lim_x: 0.5
+ * /move_base/TebLocalPlannerROS/alternative_time_cost: False
+ * /move_base/TebLocalPlannerROS/costmap_converter_plugin: 
+ * /move_base/TebLocalPlannerROS/costmap_converter_rate: 5
+ * /move_base/TebLocalPlannerROS/costmap_converter_spin_thread: True
+ * /move_base/TebLocalPlannerROS/costmap_obstacles_behind_robot_dist: 1.0
+ * /move_base/TebLocalPlannerROS/dt_hysteresis: 0.2
+ * /move_base/TebLocalPlannerROS/dt_ref: 0.6
+ * /move_base/TebLocalPlannerROS/enable_homotopy_class_planning: True
+ * /move_base/TebLocalPlannerROS/enable_multithreading: True
+ * /move_base/TebLocalPlannerROS/feasibility_check_no_poses: 5
+ * /move_base/TebLocalPlannerROS/footprint_model/line_end: [0.3, 0.0]
+ * /move_base/TebLocalPlannerROS/footprint_model/line_start: [-0.3, 0.0]
+ * /move_base/TebLocalPlannerROS/footprint_model/type: line
+ * /move_base/TebLocalPlannerROS/free_goal_vel: False
+ * /move_base/TebLocalPlannerROS/global_plan_overwrite_orientation: True
+ * /move_base/TebLocalPlannerROS/h_signature_prescaler: 0.5
+ * /move_base/TebLocalPlannerROS/h_signature_threshold: 0.1
+ * /move_base/TebLocalPlannerROS/include_costmap_obstacles: True
+ * /move_base/TebLocalPlannerROS/map_frame: /map
+ * /move_base/TebLocalPlannerROS/max_global_plan_lookahead_dist: 3.0
+ * /move_base/TebLocalPlannerROS/max_number_classes: 4
+ * /move_base/TebLocalPlannerROS/max_vel_theta: 0.2
+ * /move_base/TebLocalPlannerROS/max_vel_x: 0.2
+ * /move_base/TebLocalPlannerROS/max_vel_x_backwards: 0.2
+ * /move_base/TebLocalPlannerROS/min_obstacle_dist: 0.4
+ * /move_base/TebLocalPlannerROS/min_turning_radius: 0.0
+ * /move_base/TebLocalPlannerROS/no_inner_iterations: 5
+ * /move_base/TebLocalPlannerROS/no_outer_iterations: 4
+ * /move_base/TebLocalPlannerROS/obstacle_heading_threshold: 0.45
+ * /move_base/TebLocalPlannerROS/obstacle_keypoint_offset: 0.1
+ * /move_base/TebLocalPlannerROS/obstacle_poses_affected: 30
+ * /move_base/TebLocalPlannerROS/odom_topic: odom
+ * /move_base/TebLocalPlannerROS/optimization_activate: True
+ * /move_base/TebLocalPlannerROS/optimization_verbose: False
+ * /move_base/TebLocalPlannerROS/penalty_epsilon: 0.1
+ * /move_base/TebLocalPlannerROS/roadmap_graph_area_width: 5
+ * /move_base/TebLocalPlannerROS/roadmap_graph_no_samples: 15
+ * /move_base/TebLocalPlannerROS/simple_exploration: False
+ * /move_base/TebLocalPlannerROS/teb_autosize: True
+ * /move_base/TebLocalPlannerROS/visualize_hc_graph: False
+ * /move_base/TebLocalPlannerROS/weight_acc_lim_theta: 1
+ * /move_base/TebLocalPlannerROS/weight_acc_lim_x: 1
+ * /move_base/TebLocalPlannerROS/weight_dynamic_obstacle: 10
+ * /move_base/TebLocalPlannerROS/weight_kinematics_forward_drive: 1
+ * /move_base/TebLocalPlannerROS/weight_kinematics_nh: 1000
+ * /move_base/TebLocalPlannerROS/weight_kinematics_turning_radius: 1
+ * /move_base/TebLocalPlannerROS/weight_max_vel_theta: 1
+ * /move_base/TebLocalPlannerROS/weight_max_vel_x: 2
+ * /move_base/TebLocalPlannerROS/weight_obstacle: 50
+ * /move_base/TebLocalPlannerROS/weight_optimaltime: 1
+ * /move_base/TebLocalPlannerROS/xy_goal_tolerance: 0.2
+ * /move_base/TebLocalPlannerROS/yaw_goal_tolerance: 0.1
+ * /move_base/base_local_planner: teb_local_planner...
+ * /move_base/clearing_rotation_allowed: False
+ * /move_base/controller_frequency: 5.0
+ * /move_base/controller_patience: 15.0
+ * /move_base/global_costmap/footprint: [[-0.3, -0.3], [-...
+ * /move_base/global_costmap/footprint_padding: 0.05
+ * /move_base/global_costmap/global_frame: map
+ * /move_base/global_costmap/height: 40.0
+ * /move_base/global_costmap/inflater_layer/cost_scaling_factor: 10.0
+ * /move_base/global_costmap/inflater_layer/inflation_radius: 0.8
+ * /move_base/global_costmap/inflater_layer/lethal_cost_threshold: 100
+ * /move_base/global_costmap/map_type: voxel
+ * /move_base/global_costmap/mark_threshold: 0
+ * /move_base/global_costmap/max_obstacle_height: 2.0
+ * /move_base/global_costmap/meter_scoring: True
+ * /move_base/global_costmap/obstacle_range: 2.5
+ * /move_base/global_costmap/obstacles_layer/observation_sources: scan
+ * /move_base/global_costmap/obstacles_layer/scan/clearing: True
+ * /move_base/global_costmap/obstacles_layer/scan/data_type: LaserScan
+ * /move_base/global_costmap/obstacles_layer/scan/marking: True
+ * /move_base/global_costmap/obstacles_layer/scan/max_obstacle_height: 2.0
+ * /move_base/global_costmap/obstacles_layer/scan/min_obstacle_height: -2.0
+ * /move_base/global_costmap/obstacles_layer/scan/obstacle_range: 2.5
+ * /move_base/global_costmap/obstacles_layer/scan/raytrace_range: 3.0
+ * /move_base/global_costmap/obstacles_layer/scan/sensor_frame: front_laser
+ * /move_base/global_costmap/obstacles_layer/scan/topic: front/scan
+ * /move_base/global_costmap/origin_z: 0.0
+ * /move_base/global_costmap/plugins: [{'name': 'static...
+ * /move_base/global_costmap/publish_frequency: 15.0
+ * /move_base/global_costmap/publish_voxel_map: True
+ * /move_base/global_costmap/raytrace_range: 3.0
+ * /move_base/global_costmap/resolution: 0.1
+ * /move_base/global_costmap/robot_base_frame: base_link
+ * /move_base/global_costmap/rolling_window: False
+ * /move_base/global_costmap/social_navigation_layer/aplitude: 77.0
+ * /move_base/global_costmap/social_navigation_layer/covariance: 0.25
+ * /move_base/global_costmap/social_navigation_layer/cutoff: 10.0
+ * /move_base/global_costmap/social_navigation_layer/factor: 5.0
+ * /move_base/global_costmap/social_navigation_layer/keep_time: 0.75
+ * /move_base/global_costmap/static_map: True
+ * /move_base/global_costmap/transform_tolerance: 0.1
+ * /move_base/global_costmap/unknown_threshold: 9
+ * /move_base/global_costmap/update_frequency: 5.0
+ * /move_base/global_costmap/width: 40.0
+ * /move_base/global_costmap/z_resolution: 0.1
+ * /move_base/global_costmap/z_voxels: 10
+ * /move_base/local_costmap/footprint: [[-0.3, -0.3], [-...
+ * /move_base/local_costmap/footprint_padding: 0.05
+ * /move_base/local_costmap/global_frame: map
+ * /move_base/local_costmap/height: 20.0
+ * /move_base/local_costmap/inflater_layer/cost_scaling_factor: 10.0
+ * /move_base/local_costmap/inflater_layer/inflation_radius: 0.8
+ * /move_base/local_costmap/inflater_layer/lethal_cost_threshold: 100
+ * /move_base/local_costmap/map_type: voxel
+ * /move_base/local_costmap/mark_threshold: 0
+ * /move_base/local_costmap/max_obstacle_height: 2.0
+ * /move_base/local_costmap/meter_scoring: True
+ * /move_base/local_costmap/obstacle_range: 2.5
+ * /move_base/local_costmap/obstacles_layer/observation_sources: scan
+ * /move_base/local_costmap/obstacles_layer/scan/clearing: True
+ * /move_base/local_costmap/obstacles_layer/scan/data_type: LaserScan
+ * /move_base/local_costmap/obstacles_layer/scan/marking: True
+ * /move_base/local_costmap/obstacles_layer/scan/max_obstacle_height: 2.0
+ * /move_base/local_costmap/obstacles_layer/scan/min_obstacle_height: -2.0
+ * /move_base/local_costmap/obstacles_layer/scan/obstacle_range: 2.5
+ * /move_base/local_costmap/obstacles_layer/scan/raytrace_range: 3.0
+ * /move_base/local_costmap/obstacles_layer/scan/sensor_frame: front_laser
+ * /move_base/local_costmap/obstacles_layer/scan/topic: front/scan
+ * /move_base/local_costmap/origin_z: 0.0
+ * /move_base/local_costmap/plugins: [{'name': 'obstac...
+ * /move_base/local_costmap/publish_frequency: 15.0
+ * /move_base/local_costmap/publish_voxel_map: True
+ * /move_base/local_costmap/raytrace_range: 3.0
+ * /move_base/local_costmap/resolution: 0.1
+ * /move_base/local_costmap/robot_base_frame: base_link
+ * /move_base/local_costmap/rolling_window: True
+ * /move_base/local_costmap/social_navigation_layer/aplitude: 77.0
+ * /move_base/local_costmap/social_navigation_layer/covariance: 0.25
+ * /move_base/local_costmap/social_navigation_layer/cutoff: 10.0
+ * /move_base/local_costmap/social_navigation_layer/factor: 5.0
+ * /move_base/local_costmap/social_navigation_layer/keep_time: 0.75
+ * /move_base/local_costmap/static_map: False
+ * /move_base/local_costmap/transform_tolerance: 0.1
+ * /move_base/local_costmap/unknown_threshold: 9
+ * /move_base/local_costmap/update_frequency: 5.0
+ * /move_base/local_costmap/width: 20.0
+ * /move_base/local_costmap/z_resolution: 0.1
+ * /move_base/local_costmap/z_voxels: 10
+ * /move_base/oscillation_distance: 0.5
+ * /move_base/oscillation_timeout: 0.0
+ * /move_base/planner_frequency: 5.0
+ * /move_base/planner_patience: 15.0
+ * /move_base/recovery_behavior_enabled: True
+ * /move_base/shutdown_costmaps: False
+ * /pointcloud_to_laserscan/angle_increment: 0.0087
+ * /pointcloud_to_laserscan/angle_max: 3.1416
+ * /pointcloud_to_laserscan/angle_min: -3.1416
+ * /pointcloud_to_laserscan/concurrency_level: 1
+ * /pointcloud_to_laserscan/max_height: 1.0
+ * /pointcloud_to_laserscan/min_height: 0.0
+ * /pointcloud_to_laserscan/range_min: 0.1
+ * /pointcloud_to_laserscan/scan_time: 0.05
+ * /pointcloud_to_laserscan/transform_tolerance: 0.01
+ * /pointcloud_to_laserscan/use_inf: False
+ * /rosdistro: noetic
+ * /rosversion: 1.16.0
+ * /slam_gmapping/angularUpdate: 0.2
+ * /slam_gmapping/astep: 0.05
+ * /slam_gmapping/base_frame: base_link
+ * /slam_gmapping/delta: 0.05
+ * /slam_gmapping/iterations: 5
+ * /slam_gmapping/kernelSize: 1
+ * /slam_gmapping/lasamplerange: 0.005
+ * /slam_gmapping/lasamplestep: 0.005
+ * /slam_gmapping/linearUpdate: 0.2
+ * /slam_gmapping/llsamplerange: 0.01
+ * /slam_gmapping/llsamplestep: 0.01
+ * /slam_gmapping/lsigma: 0.075
+ * /slam_gmapping/lskip: 0
+ * /slam_gmapping/lstep: 0.05
+ * /slam_gmapping/map_frame: map
+ * /slam_gmapping/map_update_interval: 5.0
+ * /slam_gmapping/maxRange: 20.0
+ * /slam_gmapping/maxUrange: 20.0
+ * /slam_gmapping/minimumScore: 0.0
+ * /slam_gmapping/odom_frame: odom
+ * /slam_gmapping/ogain: 3.0
+ * /slam_gmapping/particles: 10
+ * /slam_gmapping/resampleThreshold: 0.5
+ * /slam_gmapping/sigma: 0.05
+ * /slam_gmapping/srr: 0.01
+ * /slam_gmapping/srt: 0.02
+ * /slam_gmapping/str: 0.01
+ * /slam_gmapping/stt: 0.02
+ * /slam_gmapping/temporalUpdate: 0.1
+ * /slam_gmapping/throttle_scans: 5
+ * /slam_gmapping/xmax: 10.0
+ * /slam_gmapping/xmin: -10.0
+ * /slam_gmapping/ymax: 10.0
+ * /slam_gmapping/ymin: -10.0
+
+NODES
+  /
+    base_to_velodyne (tf/static_transform_publisher)
+    move_base (move_base/move_base)
+    pointcloud_to_laserscan (pointcloud_to_laserscan/pointcloud_to_laserscan_node)
+    slam_gmapping (gmapping/slam_gmapping)
+[33m[ WARN] [1683732256.518879373]: global_costmap: Pre-Hydro parameter "static_map" unused since "plugins" is provided[0m
+[33m[ WARN] [1683732256.530979873]: global_costmap: Pre-Hydro parameter "map_type" unused since "plugins" is provided[0m
+[0m[ INFO] [1683732257.217271325]: Laser is mounted upwards.[0m
+ -maxUrange 20 -maxUrange 20 -sigma     0.05 -kernelSize 1 -lstep 0.05 -lobsGain 3 -astep 0.05
+ -srr 0.01 -srt 0.02 -str 0.01 -stt 0.02
+ -linearUpdate 0.2 -angularUpdate 0.2 -resampleThreshold 0.5
+ -xmin -10 -xmax 10 -ymin -10 -ymax 10 -delta 0.05 -particles 10
+[0m[ INFO] [1683732257.232303654]: Initialization complete[0m
+update frame 0
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 0
+Registering First Scan
+update frame 1
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 1
+[33m[ WARN] [1683732257.828328528]: local_costmap: Pre-Hydro parameter "static_map" unused since "plugins" is provided[0m
+[33m[ WARN] [1683732257.830577896]: local_costmap: Pre-Hydro parameter "map_type" unused since "plugins" is provided[0m
+Average Scan Matching Score=701.199
+neff= 10
+Registering Scans:Done
+update frame 2
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 2
+Average Scan Matching Score=701.779
+neff= 10
+Registering Scans:Done
+[33m[ WARN] [1683732258.645395644]: TebLocalPlannerROS() Param Warning: 'alternative_time_cost' is deprecated. It has been replaced by 'selection_alternative_time_cost'.[0m
+update frame 3
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 3
+Average Scan Matching Score=713.95
+neff= 10
+Registering Scans:Done
+update frame 4
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 4
+Average Scan Matching Score=714.804
+neff= 10
+Registering Scans:Done
+update frame 5
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 5
+Average Scan Matching Score=719.081
+neff= 10
+Registering Scans:Done
+update frame 6
+update ld=4.44089e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 6
+Average Scan Matching Score=719.784
+neff= 10
+Registering Scans:Done
+update frame 7
+update ld=4.44089e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 7
+Average Scan Matching Score=718.585
+neff= 10
+Registering Scans:Done
+update frame 8
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 8
+Average Scan Matching Score=717.985
+neff= 10
+Registering Scans:Done
+update frame 9
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 9
+Average Scan Matching Score=721.204
+neff= 10
+Registering Scans:Done
+update frame 10
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 10
+Average Scan Matching Score=720.942
+neff= 10
+Registering Scans:Done
+update frame 11
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 11
+Average Scan Matching Score=718.158
+neff= 10
+Registering Scans:Done
+update frame 12
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 12
+Average Scan Matching Score=717.413
+neff= 10
+Registering Scans:Done
+update frame 13
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 13
+Average Scan Matching Score=720.477
+neff= 10
+Registering Scans:Done
+update frame 14
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 14
+Average Scan Matching Score=721.463
+neff= 10
+Registering Scans:Done
+update frame 15
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 15
+Average Scan Matching Score=719.355
+neff= 10
+Registering Scans:Done
+update frame 16
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 16
+Average Scan Matching Score=720.452
+neff= 10
+Registering Scans:Done
+update frame 17
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 17
+Average Scan Matching Score=721.462
+neff= 10
+Registering Scans:Done
+update frame 18
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 18
+Average Scan Matching Score=721.628
+neff= 10
+Registering Scans:Done
+update frame 19
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 19
+Average Scan Matching Score=721.635
+neff= 10
+Registering Scans:Done
+update frame 20
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 20
+Average Scan Matching Score=720.58
+neff= 10
+Registering Scans:Done
+update frame 21
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 21
+Average Scan Matching Score=721.554
+neff= 10
+Registering Scans:Done
+update frame 22
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 22
+Average Scan Matching Score=721.311
+neff= 10
+Registering Scans:Done
+update frame 23
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 23
+Average Scan Matching Score=721.517
+neff= 10
+Registering Scans:Done
+update frame 24
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 24
+Average Scan Matching Score=721.617
+neff= 10
+Registering Scans:Done
+update frame 25
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 25
+Average Scan Matching Score=721.626
+neff= 10
+Registering Scans:Done
+update frame 26
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 26
+Average Scan Matching Score=721.529
+neff= 10
+Registering Scans:Done
+update frame 27
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 27
+Average Scan Matching Score=685.712
+neff= 10
+Registering Scans:Done
+update frame 28
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 28
+Average Scan Matching Score=721.467
+neff= 10
+Registering Scans:Done
+update frame 29
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 29
+Average Scan Matching Score=721.473
+neff= 10
+Registering Scans:Done
+update frame 30
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 30
+Average Scan Matching Score=721.528
+neff= 10
+Registering Scans:Done
+update frame 31
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 31
+Average Scan Matching Score=721.646
+neff= 10
+Registering Scans:Done
+update frame 32
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 32
+Average Scan Matching Score=721.703
+neff= 10
+Registering Scans:Done
+update frame 33
+update ld=4.44089e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 33
+Average Scan Matching Score=721.575
+neff= 10
+Registering Scans:Done
+update frame 34
+update ld=4.44089e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 34
+Average Scan Matching Score=721.64
+neff= 10
+Registering Scans:Done
+update frame 35
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 35
+Average Scan Matching Score=720.444
+neff= 10
+Registering Scans:Done
+update frame 36
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 36
+Average Scan Matching Score=721.597
+neff= 10
+Registering Scans:Done
+update frame 37
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 37
+Average Scan Matching Score=721.605
+neff= 10
+Registering Scans:Done
+update frame 38
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 38
+Average Scan Matching Score=721.717
+neff= 10
+Registering Scans:Done
+update frame 39
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 39
+Average Scan Matching Score=721.667
+neff= 10
+Registering Scans:Done
+update frame 40
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 40
+Average Scan Matching Score=721.645
+neff= 10
+Registering Scans:Done
+update frame 41
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 41
+Average Scan Matching Score=721.435
+neff= 10
+Registering Scans:Done
+update frame 42
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 42
+Average Scan Matching Score=721.642
+neff= 10
+Registering Scans:Done
+update frame 43
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 43
+Average Scan Matching Score=721.642
+neff= 10
+Registering Scans:Done
+update frame 44
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 44
+Average Scan Matching Score=721.541
+neff= 10
+Registering Scans:Done
+update frame 45
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 45
+Average Scan Matching Score=721.755
+neff= 10
+Registering Scans:Done
+update frame 46
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 46
+Average Scan Matching Score=721.521
+neff= 10
+Registering Scans:Done
+update frame 47
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 47
+Average Scan Matching Score=720.623
+neff= 10
+Registering Scans:Done
+update frame 48
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 48
+Average Scan Matching Score=720.195
+neff= 10
+Registering Scans:Done
+update frame 49
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 49
+Average Scan Matching Score=720.676
+neff= 10
+Registering Scans:Done
+update frame 50
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 50
+Average Scan Matching Score=721.423
+neff= 10
+Registering Scans:Done
+update frame 51
+update ld=2.22045e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 51
+Average Scan Matching Score=720.706
+neff= 10
+Registering Scans:Done
+update frame 52
+update ld=2.22045e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 52
+Average Scan Matching Score=721.569
+neff= 10
+Registering Scans:Done
+update frame 53
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 53
+Average Scan Matching Score=720.348
+neff= 10
+Registering Scans:Done
+update frame 54
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 54
+Average Scan Matching Score=721.67
+neff= 10
+Registering Scans:Done
+update frame 55
+update ld=4.44089e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 55
+Average Scan Matching Score=721.725
+neff= 10
+Registering Scans:Done
+update frame 56
+update ld=4.44089e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 56
+Average Scan Matching Score=720.552
+neff= 10
+Registering Scans:Done
+update frame 57
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 57
+Average Scan Matching Score=721.667
+neff= 10
+Registering Scans:Done
+update frame 58
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 58
+Average Scan Matching Score=720.593
+neff= 10
+Registering Scans:Done
+update frame 59
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 59
+Average Scan Matching Score=721.669
+neff= 10
+Registering Scans:Done
+update frame 60
+update ld=4.96507e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 60
+Average Scan Matching Score=721.715
+neff= 10
+Registering Scans:Done
+update frame 61
+update ld=4.96507e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 61
+Average Scan Matching Score=720.298
+neff= 10
+Registering Scans:Done
+update frame 62
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 62
+Average Scan Matching Score=721.568
+neff= 10
+Registering Scans:Done
+update frame 63
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 63
+Average Scan Matching Score=721.638
+neff= 10
+Registering Scans:Done
+update frame 64
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 64
+Average Scan Matching Score=721.676
+neff= 10
+Registering Scans:Done
+update frame 65
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 65
+Average Scan Matching Score=718.549
+neff= 10
+Registering Scans:Done
+update frame 66
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 66
+Average Scan Matching Score=720.738
+neff= 10
+Registering Scans:Done
+update frame 67
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 67
+Average Scan Matching Score=721.538
+neff= 10
+Registering Scans:Done
+update frame 68
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 68
+Average Scan Matching Score=720.524
+neff= 10
+Registering Scans:Done
+update frame 69
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 69
+Average Scan Matching Score=720.59
+neff= 10
+Registering Scans:Done
+update frame 70
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 70
+Average Scan Matching Score=720.409
+neff= 10
+Registering Scans:Done
+update frame 71
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 71
+Average Scan Matching Score=721.409
+neff= 10
+Registering Scans:Done
+update frame 72
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 72
+Average Scan Matching Score=719.628
+neff= 10
+Registering Scans:Done
+update frame 73
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 73
+Average Scan Matching Score=720.437
+neff= 10
+Registering Scans:Done
+update frame 74
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 74
+Average Scan Matching Score=720.607
+neff= 10
+Registering Scans:Done
+update frame 75
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 75
+Average Scan Matching Score=721.667
+neff= 10
+Registering Scans:Done
+update frame 76
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 76
+Average Scan Matching Score=721.672
+neff= 10
+Registering Scans:Done
+update frame 77
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 77
+Average Scan Matching Score=721.608
+neff= 10
+Registering Scans:Done
+update frame 78
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 78
+Average Scan Matching Score=721.563
+neff= 10
+Registering Scans:Done
+update frame 79
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 79
+Average Scan Matching Score=721.65
+neff= 10
+Registering Scans:Done
+update frame 80
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 80
+Average Scan Matching Score=720.604
+neff= 10
+Registering Scans:Done
+update frame 81
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 81
+Average Scan Matching Score=718.726
+neff= 10
+Registering Scans:Done
+update frame 82
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 82
+Average Scan Matching Score=721.731
+neff= 10
+Registering Scans:Done
+update frame 83
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 83
+Average Scan Matching Score=720.546
+neff= 10
+Registering Scans:Done
+update frame 84
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 84
+Average Scan Matching Score=720.707
+neff= 10
+Registering Scans:Done
+update frame 85
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 85
+Average Scan Matching Score=721.703
+neff= 10
+Registering Scans:Done
+update frame 86
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 86
+Average Scan Matching Score=721.694
+neff= 10
+Registering Scans:Done
+update frame 87
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 87
+Average Scan Matching Score=721.759
+neff= 10
+Registering Scans:Done
+update frame 88
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 88
+Average Scan Matching Score=720.66
+neff= 10
+Registering Scans:Done
+update frame 89
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 89
+Average Scan Matching Score=721.662
+neff= 10
+Registering Scans:Done
+update frame 90
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 90
+Average Scan Matching Score=720.648
+neff= 10
+Registering Scans:Done
+update frame 91
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 91
+Average Scan Matching Score=720.683
+neff= 10
+Registering Scans:Done
+update frame 92
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 92
+Average Scan Matching Score=721.749
+neff= 10
+Registering Scans:Done
+update frame 93
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 93
+Average Scan Matching Score=721.672
+neff= 10
+Registering Scans:Done
+update frame 94
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 94
+Average Scan Matching Score=721.602
+neff= 10
+Registering Scans:Done
+update frame 95
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 95
+Average Scan Matching Score=721.674
+neff= 10
+Registering Scans:Done
+update frame 96
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 96
+Average Scan Matching Score=721.669
+neff= 10
+Registering Scans:Done
+update frame 97
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 97
+Average Scan Matching Score=721.681
+neff= 10
+Registering Scans:Done
+update frame 98
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 98
+Average Scan Matching Score=721.604
+neff= 10
+Registering Scans:Done
+update frame 99
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 99
+Average Scan Matching Score=721.61
+neff= 10
+Registering Scans:Done
+update frame 100
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 100
+Average Scan Matching Score=721.571
+neff= 10
+Registering Scans:Done
+update frame 101
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 101
+Average Scan Matching Score=721.693
+neff= 10
+Registering Scans:Done
+update frame 102
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 102
+Average Scan Matching Score=721.778
+neff= 10
+Registering Scans:Done
+update frame 103
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 103
+Average Scan Matching Score=721.688
+neff= 10
+Registering Scans:Done
+update frame 104
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 104
+Average Scan Matching Score=720.661
+neff= 10
+Registering Scans:Done
+update frame 105
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 105
+Average Scan Matching Score=720.737
+neff= 10
+Registering Scans:Done
+update frame 106
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 106
+Average Scan Matching Score=719.586
+neff= 10
+Registering Scans:Done
+update frame 107
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 107
+Average Scan Matching Score=721.73
+neff= 10
+Registering Scans:Done
+update frame 108
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 108
+[33m[ WARN] [1683732315.473675733]: Control loop missed its desired rate of 5.0000Hz... the loop actually took 5.0679 seconds[0m
+[33m[ WARN] [1683732315.477366484]: Map update loop missed its desired rate of 5.0000Hz... the loop actually took 5.0500 seconds[0m
+Average Scan Matching Score=721.638
+neff= 10
+Registering Scans:Done
+update frame 109
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 109
+Average Scan Matching Score=721.726
+neff= 10
+Registering Scans:Done
+update frame 110
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 110
+Average Scan Matching Score=720.701
+neff= 10
+Registering Scans:Done
+update frame 111
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 111
+Average Scan Matching Score=721.506
+neff= 10
+Registering Scans:Done
+update frame 112
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 112
+Average Scan Matching Score=721.688
+neff= 10
+Registering Scans:Done
+update frame 113
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 113
+Average Scan Matching Score=720.689
+neff= 10
+Registering Scans:Done
+update frame 114
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 114
+Average Scan Matching Score=719.663
+neff= 10
+Registering Scans:Done
+update frame 115
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 115
+Average Scan Matching Score=721.637
+neff= 10
+Registering Scans:Done
+update frame 116
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 116
+Average Scan Matching Score=721.731
+neff= 10
+Registering Scans:Done
+update frame 117
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 117
+Average Scan Matching Score=720.655
+neff= 10
+Registering Scans:Done
+update frame 118
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 118
+Average Scan Matching Score=720.702
+neff= 10
+Registering Scans:Done
+update frame 119
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 119
+Average Scan Matching Score=721.544
+neff= 10
+Registering Scans:Done
+update frame 120
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 120
+Average Scan Matching Score=721.684
+neff= 10
+Registering Scans:Done
+[33m[ WARN] [1683732322.515235323]: Control loop missed its desired rate of 5.0000Hz... the loop actually took 7.0416 seconds[0m
+[33m[ WARN] [1683732322.519665359]: Map update loop missed its desired rate of 5.0000Hz... the loop actually took 7.0423 seconds[0m
+update frame 121
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 121
+Average Scan Matching Score=721.738
+neff= 10
+Registering Scans:Done
+update frame 122
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 122
+Average Scan Matching Score=721.719
+neff= 10
+Registering Scans:Done
+update frame 123
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 123
+Average Scan Matching Score=720.677
+neff= 10
+Registering Scans:Done
+update frame 124
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 124
+Average Scan Matching Score=721.698
+neff= 10
+Registering Scans:Done
+update frame 125
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 125
+Average Scan Matching Score=721.676
+neff= 10
+Registering Scans:Done
+update frame 126
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 126
+Average Scan Matching Score=721.739
+neff= 10
+Registering Scans:Done
+update frame 127
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 127
+Average Scan Matching Score=720.682
+neff= 10
+Registering Scans:Done
+update frame 128
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 128
+Average Scan Matching Score=721.641
+neff= 10
+Registering Scans:Done
+update frame 129
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 129
+Average Scan Matching Score=721.697
+neff= 10
+Registering Scans:Done
+update frame 130
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 130
+Average Scan Matching Score=721.748
+neff= 10
+Registering Scans:Done
+update frame 131
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 131
+Average Scan Matching Score=721.727
+neff= 10
+Registering Scans:Done
+[33m[ WARN] [1683732329.096979745]: Control loop missed its desired rate of 5.0000Hz... the loop actually took 6.5817 seconds[0m
+[33m[ WARN] [1683732329.101406187]: Map update loop missed its desired rate of 5.0000Hz... the loop actually took 6.5817 seconds[0m
+update frame 132
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 132
+Average Scan Matching Score=721.644
+neff= 10
+Registering Scans:Done
+update frame 133
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 133
+Average Scan Matching Score=721.721
+neff= 10
+Registering Scans:Done
+update frame 134
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 134
+Average Scan Matching Score=720.709
+neff= 10
+Registering Scans:Done
+update frame 135
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 135
+Average Scan Matching Score=721.696
+neff= 10
+Registering Scans:Done
+update frame 136
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 136
+Average Scan Matching Score=720.719
+neff= 10
+Registering Scans:Done
+update frame 137
+update ld=2.22045e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 137
+Average Scan Matching Score=721.781
+neff= 10
+Registering Scans:Done
+update frame 138
+update ld=2.22045e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 138
+Average Scan Matching Score=720.75
+neff= 10
+Registering Scans:Done
+update frame 139
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 139
+Average Scan Matching Score=720.688
+neff= 10
+Registering Scans:Done
+update frame 140
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 140
+Average Scan Matching Score=721.688
+neff= 10
+Registering Scans:Done
+update frame 141
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 141
+Average Scan Matching Score=721.743
+neff= 10
+Registering Scans:Done
+update frame 142
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 142
+Average Scan Matching Score=721.339
+neff= 10
+Registering Scans:Done
+update frame 143
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 143
+Average Scan Matching Score=721.674
+neff= 10
+Registering Scans:Done
+update frame 144
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 144
+Average Scan Matching Score=721.682
+neff= 10
+Registering Scans:Done
+update frame 145
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 145
+Average Scan Matching Score=720.685
+neff= 10
+Registering Scans:Done
+update frame 146
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 146
+Average Scan Matching Score=721.735
+neff= 10
+Registering Scans:Done
+update frame 147
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 147
+Average Scan Matching Score=721.589
+neff= 10
+Registering Scans:Done
+update frame 148
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 148
+Average Scan Matching Score=720.673
+neff= 10
+Registering Scans:Done
+update frame 149
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 149
+Average Scan Matching Score=721.235
+neff= 10
+Registering Scans:Done
+update frame 150
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 150
+Average Scan Matching Score=718.379
+neff= 10
+Registering Scans:Done
+update frame 151
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 151
+Average Scan Matching Score=721.442
+neff= 10
+Registering Scans:Done
+update frame 152
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 152
+Average Scan Matching Score=721.55
+neff= 10
+Registering Scans:Done
+update frame 153
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 153
+Average Scan Matching Score=721.535
+neff= 10
+Registering Scans:Done
+update frame 154
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 154
+Average Scan Matching Score=721.561
+neff= 10
+Registering Scans:Done
+update frame 155
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 155
+Average Scan Matching Score=721.488
+neff= 10
+Registering Scans:Done
+update frame 156
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 156
+Average Scan Matching Score=721.448
+neff= 10
+Registering Scans:Done
+[33m[ WARN] [1683732344.854813937]: Control loop missed its desired rate of 5.0000Hz... the loop actually took 15.7578 seconds[0m
+[33m[ WARN] [1683732344.861231566]: Map update loop missed its desired rate of 5.0000Hz... the loop actually took 15.7594 seconds[0m
+update frame 157
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 157
+Average Scan Matching Score=721.327
+neff= 10
+Registering Scans:Done
+update frame 158
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 158
+Average Scan Matching Score=720.097
+neff= 10
+Registering Scans:Done
+update frame 159
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 159
+Average Scan Matching Score=721.403
+neff= 10
+Registering Scans:Done
+update frame 160
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 160
+Average Scan Matching Score=720.533
+neff= 10
+Registering Scans:Done
+update frame 161
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 161
+Average Scan Matching Score=721.625
+neff= 10
+Registering Scans:Done
+update frame 162
+update ld=4.44089e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 162
+Average Scan Matching Score=721.265
+neff= 10
+Registering Scans:Done
+update frame 163
+update ld=4.44089e-16 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 163
+Average Scan Matching Score=720.244
+neff= 10
+Registering Scans:Done
+update frame 164
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 164
+Average Scan Matching Score=720.293
+neff= 10
+Registering Scans:Done
+[33m[ WARN] [1683732351.853346760]: Control loop missed its desired rate of 5.0000Hz... the loop actually took 6.9985 seconds[0m
+[33m[ WARN] [1683732351.859014738]: Map update loop missed its desired rate of 5.0000Hz... the loop actually took 6.9982 seconds[0m
+update frame 165
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 165
+Average Scan Matching Score=721.265
+neff= 10
+Registering Scans:Done
+update frame 166
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 166
+Average Scan Matching Score=721.376
+neff= 10
+Registering Scans:Done
+update frame 167
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 167
+Average Scan Matching Score=721.391
+neff= 10
+Registering Scans:Done
+update frame 168
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 168
+Average Scan Matching Score=720.532
+neff= 10
+Registering Scans:Done
+update frame 169
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 169
+Average Scan Matching Score=719.43
+neff= 10
+Registering Scans:Done
+update frame 170
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 170
+Average Scan Matching Score=721.442
+neff= 10
+Registering Scans:Done
+update frame 171
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 171
+Average Scan Matching Score=721.411
+neff= 10
+Registering Scans:Done
+update frame 172
+update ld=0 ad=0
+Laser Pose= -1.45758 -3.3983 -0.936105
+m_count 172
+Average Scan Matching Score=721.221
+neff= 10
+Registering Scans:Done
+virtual GMapping::GridSlamProcessor::~GridSlamProcessor(): Start
+virtual GMapping::GridSlamProcessor::~GridSlamProcessor(): Deleting tree
+[0m[ INFO] [1683732256.537661516]: global_costmap: Using plugin "static_layer"[0m
+[0m[ INFO] [1683732256.568685203]: Requesting the map...[0m
+[0m[ INFO] [1683732257.381603641]: Resizing costmap to 960 X 736 at 0.050000 m/pix[0m
+[0m[ INFO] [1683732257.480347107]: Received a 960 X 736 map at 0.050000 m/pix[0m
+[0m[ INFO] [1683732257.504322842]: global_costmap: Using plugin "obstacles_layer"[0m
+[0m[ INFO] [1683732257.530858315]:     Subscribed to Topics: scan[0m
+[0m[ INFO] [1683732257.617427269]: global_costmap: Using plugin "inflater_layer"[0m
+[0m[ INFO] [1683732257.834710217]: local_costmap: Using plugin "obstacles_layer"[0m
+[0m[ INFO] [1683732257.864244552]:     Subscribed to Topics: scan[0m
+[0m[ INFO] [1683732257.941421444]: local_costmap: Using plugin "inflater_layer"[0m
+[0m[ INFO] [1683732257.983852285]: local_costmap: Using plugin "static_layer"[0m
+[0m[ INFO] [1683732258.003990548]: Requesting the map...[0m
+[0m[ INFO] [1683732258.024093498]: Resizing static layer to 960 X 736 at 0.050000 m/pix[0m
+[0m[ INFO] [1683732258.118501774]: Received a 960 X 736 map at 0.050000 m/pix[0m
+[0m[ INFO] [1683732258.281146452]: Created local_planner teb_local_planner/TebLocalPlannerROS[0m
+[0m[ INFO] [1683732258.668215158]: Footprint model 'line' (line_start: [-0.3,0]m, line_end: [0.3,0]m) loaded for trajectory optimization.[0m
+[0m[ INFO] [1683732258.668386724]: Parallel planning in distinctive topologies enabled.[0m
+[0m[ INFO] [1683732258.668461830]: No costmap conversion plugin specified. All occupied costmap cells are treaten as point obstacles.[0m
+[0m[ INFO] [1683732259.458657426]: Recovery behavior will clear layer 'obstacles'[0m
+[0m[ INFO] [1683732259.470214842]: Recovery behavior will clear layer 'obstacles'[0m
+[0m[ INFO] [1683732259.610338398]: odom received![0m
+
+[1mROS_MASTER_URI=http://10.100.21.115:11311[0m
+]2;/home/jetson/agile_ws/src/agilex_scout_mini/launch/slam.launch http://10.100.21.115:11311
+[1mprocess[base_to_velodyne-1]: started with pid [492402][0m
+[1mprocess[pointcloud_to_laserscan-2]: started with pid [492403][0m
+[1mprocess[slam_gmapping-3]: started with pid [492404][0m
+[1mprocess[move_base-4]: started with pid [492413][0m
+[move_base-4] killing on exit
+[slam_gmapping-3] killing on exit
+[base_to_velodyne-1] killing on exit
+[pointcloud_to_laserscan-2] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m
