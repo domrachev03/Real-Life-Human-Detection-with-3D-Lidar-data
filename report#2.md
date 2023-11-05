@@ -77,7 +77,7 @@ We successfully developed a pipeline for detecting humans in point cloud data us
 
 #### Overview
 The objective of this task was to develop robust control software for an Ackerman model car. The software needed to ensure precise steering and speed control to navigate through predetermined paths.
-At start we only had (imulator)[https://github.com/PurplePegasuss/agilex_scout_sim] for this robot.
+At start we only had [imulator](https://github.com/PurplePegasuss/agilex_scout_sim) for this robot.
 
 #### Objectives
 - Develop a user interface to manually control the Ackerman model car.
