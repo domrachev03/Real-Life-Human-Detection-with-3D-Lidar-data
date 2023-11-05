@@ -161,4 +161,11 @@ The tracking algorithm provides a solid foundation for applications requiring hu
 #### Future Work
 - Integrate machine learning to improve tracking robustness.
 - Test the system in crowded and complex scenes for scalability.
-"""
+
+
+
+# Future work for last 3 weeks
+- Collect our own dataset with varying numbers of people in different conditions
+- Test the model's performance, and further train/teach our model for this task
+- Deploy everything on the robot, optimize for memory and performance
+- Try to give the robot commands to follow a person, and see what comes of it
