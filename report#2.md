@@ -89,9 +89,11 @@ We designed a modular control system with interfaces for manual input, sensor da
 
 #### Results and Evaluation
 The control software was tested in a controlled environment with successful navigation through a series of complex paths.
+![](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/img/lidar.gif)
 
 #### Conclusion
 The control software is capable of handling basic navigation tasks and responds well to manual inputs and sensor feedback.
+![](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/img/rosgraph.png)
 
 #### Future Work
 - Enhance the control algorithms with machine learning techniques for adaptive control.
@@ -128,8 +130,8 @@ The YOLO algorithm was fine-tuned for human detection on our specific video data
 
 #### Results and Evaluation
 The YOLO algorithm achieved a high detection rate with minimal false positives, resulting in a robust dataset for model training.
-[!https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/img/human_detection_beta.jpg]
-[!https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/img/human_detection_beta1.jpg]
+![](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/img/human_detection_beta.jpg)
+![](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/img/human_detection_beta1.jpg)
 
 #### Conclusion
 The annotated dataset can significantly reduce the time required for manual labeling and increase the efficiency of training detection models.
