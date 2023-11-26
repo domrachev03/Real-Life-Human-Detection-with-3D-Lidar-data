@@ -1,7 +1,7 @@
 # Real Life Human Detection with 3D Lidar data
 [The project](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data.git) is aimed to detect a human using data from the 3D lidar. The calculations would be performed in real time on a single board computer.
 
-MD [report](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/report%232.md) with images and gifs.
+MD [report](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/Report%233.md) with images and gifs.
 
 ## Project Participants
 1. Domraсhev Ivan, i.domrachev@innopolis.university
@@ -9,29 +9,26 @@ MD [report](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lid
 3. Kiselyov Ivan, i.kiselyov@innopolis.university
 
 # List of completed tasks for last submission
+- Find the simulator for visualizing our dataset
 - Collect our own dataset of people
-- Test the model's performance, and further train/teach our model for this task
+- Test the model, and further train/teach our model for this task
 - Deploy everything on the robot, optimize for memory and performance
 
-### Test Human Detection in Point Cloud Data
-...
-[Existing content for this section]
 
-### Control software for ackerman model car
-...
-[Existing content for this section]
+### Find the simulator for visualizing our dataset
+#### Overview
+The task was aimed at finding the simple simulator for visualizing dataset or creating this simulator
 
-### Creating dataset with real camera and lidar from car model
-...
-[Existing content for this section]
+#### Objectives
+- Try to create own simulator
+- Find appropriate simulator in the internet
 
-### Detecting of Humans on camera by YOLO for creating dataset
-...
-[Existing content for this section]
+#### Results and Evaluation
+Firstly, we created a simulator but it was not good
+Here the results:
+![](./img/OwnSimulator.gif)
 
-### Detecting Human coordinates in the video
-...
-[Existing content for this section]
+Finally, we found good simulator for visualizing dataset on the internet. We will show results in the next section.
 
 ### Collect our own dataset with varying numbers of people in different conditions
 #### Overview
@@ -45,9 +42,12 @@ The task was aimed at gathering a diverse dataset with varying numbers of people
 A systematic data collection procedure was followed, capturing data in different settings and times of the day.
 
 #### Results and Evaluation
-A rich dataset was collected, showcasing a wide range of scenarios, which will be beneficial for robust model training.
+Unfortunately, we collected only one 2 dataset samples in one room configuration
+Here are sample results:
+![](./img/ShowDataset.gif)
 
-### Test the model's performance, and further train/teach our model for this task
+
+### Test the model, and further train/teach our model for this task
 #### Overview
 The task focused on evaluating the current model's performance and enhancing its capabilities through further training.
 
@@ -59,7 +59,8 @@ The task focused on evaluating the current model's performance and enhancing its
 Performance metrics were evaluated, and based on the findings, additional training sessions were conducted.
 
 #### Results and Evaluation
-The model showed improved performance and versatility after additional training phases.
+The model showed improved performance and versatility.
+
 
 ### Deploy everything on the robot, optimize for memory and performance
 #### Overview
@@ -74,17 +75,5 @@ The deployment was followed by rigorous testing and optimization cycles to enhan
 
 #### Results and Evaluation
 Post-optimization, the system demonstrated enhanced performance with efficient memory usage.
-
-### Try to give the robot commands to follow a person, and see what comes of it
-#### Overview
-The objective was to enable the robot to follow a person based on commands and assess its effectiveness.
-
-#### Objectives
-- Implement person-following capabilities in the robot.
-- Test the robustness of these capabilities in real-world scenarios.
-
-#### Methodology
-The robot was programmed with algorithms to recognize and follow a person based on specific commands.
-
-#### Results and Evaluation
-The robot successfully followed a person in various test scenarios, showing promise for practical applications.
+Here are the results of detecting human. The bounding box of detected human is shown by lidar points for visualization simplisity.
+![](./img/FinalDetection.gif)
