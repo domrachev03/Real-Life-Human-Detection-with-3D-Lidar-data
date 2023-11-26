@@ -60,6 +60,8 @@ Performance metrics were evaluated, and based on the findings, additional traini
 
 #### Results and Evaluation
 The model showed improved performance and versatility.
+Some our code [here](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/tree/master/our_code) for detecting.
+And model we took from [here](https://github.com/koide3/hdl_people_tracking/tree/2d125167ca2b0935b8075032b943edf11d996788). 
 
 
 ### Deploy everything on the robot, optimize for memory and performance
