@@ -24,7 +24,7 @@ The task was aimed at finding the simple simulator for visualizing dataset or cr
 - Find appropriate simulator in the internet
 
 #### Results and Evaluation
-Firstly, we created a simulator but it was not good
+Firstly, we created a [simulator](https://github.com/ipipos56/Lidar-Simulator) but it was not good
 Here the results:
 ![](./img/OwnSimulator.gif)
 
