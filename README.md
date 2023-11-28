@@ -35,9 +35,8 @@ Also, the Robotics Operating System (ROS) enviroment with other algorithms for a
 The idea of the resulting algorithm is straightforward: the pointcloud is first filtered by the algorithm itself, then it's passed to a [unsupervised clusterization algorithm](https://userpages.uni-koblenz.de/~agas/Documents/Haeselich2014CBP.pdf), which selects many regions of interest, which are then classified by slower, but more accurate [human classifier](https://www.aisl.cs.tut.ac.jp/~jun/pdffiles/kidono-iv2011.pdf).
 <center>
     <figure>
-    <img src="reports/img/rosgraph.png" alt="my alt text"/>
+    <img src="reports/img/system_pipeline.png" alt="my alt text"/>
     </figure>
-
 </center>
 
 ## Structure
@@ -83,7 +82,7 @@ roslaunch lidar_tracker_validation validate_tracker.launch model_name:={"kf_trac
 ```
 for details, see [report #1](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/reports/Report%231.md)
 
-> Note: the following instructions are written mainly for the given hardware setup.
+Note: the following instructions are written mainly for the given hardware setup.
 2. To record the rosbag from the robot, run:
 ```bash
 roslaunch human_detection record_with_camera.launch camera_fps:=10 record_rosbag:=true
