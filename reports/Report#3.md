@@ -1,18 +1,18 @@
 # Real Time Human Detection with 3D Lidar data
-The project ([github](](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data.git))) is aimed to detect a human using data from the 3D lidar. The calculations would be performed in real time on a single board computer.
+The project ([github](](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data.git))) aims to detect a human using data from the 3D lidar. The calculations would be performed in real time on a single board computer.
 
 > Note. The report contains lots of gif files for better visualization. Therefore, we encorage to go through markdown version of the [report](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/Report%233.md).
 
 **Project Participants**
 1. Domraсhev Ivan, i.domrachev@innopolis.university. ROS & Detection developer
 2. Eremov Artur, a.eremov@innopolis.university.      Detection & Simulation developer
-3. Kiselyov Ivan, i.kiselyov@innopolis.universit.    Scripts & Detection developer.
+3. Kiselyov Ivan, i.kiselyov@innopolis.university.    Scripts & Detection developer.
 
 
 # Overview of project timeline
 - Investigate the existing solutions for real-time human detection based on lidar data.
 - Implement the background infrastructure for the robot, and collect the dataset from the lidar.
-- Adjust the chosed model parameters to improve the performance.
+- Adjust the chosen model parameters to improve the performance.
 - Run the model on the collected dataset, and also evaluate its performance on the onboard computer.
 
 
@@ -20,22 +20,22 @@ The project ([github](](https://github.com/domrachev03/Real-Life-Human-Detection
 The detailed report on existing solutions could be found [here](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/reports/Report%231.md).
 
 In summary, we tested three different approaches:
-1. **Voxelization-based detection** ([paper](https://www.mdpi.com/1424-8220/23/10/4720), [code](https://github.com/domrachev03/LiDAR_Tracking_3D/tree/c6e36c287c771da163eb9b53d4543a5c9c4a0041)). This approach choose the regions of interest, voxelize them and runs human classification. Despite promising performance metrics, the implementation required structured pointcloud to build normals for voxelization. The current setup could not provide that, so our team decided to omit that approach
-2. **Unsupervised segmentation** ([code](https://github.com/praveen-palanisamy/multiple-object-tracking-lidar)). This approach extracted features using K-D tree based pointcloud processing, and then extracted features in unsupervised manner. Unfortunately, this algorithm is designed for tracking of any moving objects, and hence it produced many false positive results. Moverover, the actual tests showed extremely poor result.
+1. **Voxelization-based detection** ([paper](https://www.mdpi.com/1424-8220/23/10/4720), [code](https://github.com/domrachev03/LiDAR_Tracking_3D/tree/c6e36c287c771da163eb9b53d4543a5c9c4a0041)). This approach choose the regions of interest, voxelize them and runs human classification. Despite promising performance metrics, the implementation required structured pointcloud to build normals for voxelization.Since our current setup couldn't provide this, so our team decided to omit that approach
+2. **Unsupervised segmentation** ([code](https://github.com/praveen-palanisamy/multiple-object-tracking-lidar)). This approach extracted features using K-D tree based pointcloud processing, and then extracted features in unsupervised manner. Unfortunately, this algorithm is designed for tracking of any moving objects, and hence it produced many false positive results. Moreover, the model yielded extremely poor results.
 <center>
     <figure>
     <img src="img/kf_tracking.gif" width=600 alt="my alt text"/>
-    <figcaption>Unsupervised segmentation approach demo. As one could see, the performance in unsatisfactory</figcaption>
+    <figcaption>Unsupervised segmentation approach demo. As one could see, the performance is unsatisfactory</figcaption>
     </figure>
 </center>
 
 3. **Clustering + Classification** ([Paper](https://www.researchgate.net/publication/331283709_A_portable_three-dimensional_LIDAR-based_system_for_long-term_and_wide-area_people_behavior_measurement), [code](https://github.com/koide3/hdl_people_tracking/tree/2d125167ca2b0935b8075032b943edf11d996788)). This algorithm performs [Haselich's clustering technique](https://userpages.uni-koblenz.de/~agas/Documents/Haeselich2014CBP.pdf) to detect human candidate clusters, and then applies [Kidono's person classifier](https://www.aisl.cs.tut.ac.jp/~jun/pdffiles/kidono-iv2011.pdf) to eliminate false detections. 
-   The results on our dataset were significanly better, than for the previous model. On top of that, the code is very flexible and has many parameters to configure. Therefore, we decided to proceed with this algorithm. 
+   The results on our dataset were significantly better, than for the previous model. On top of that, the code is very flexible and has many parameters to configure. Therefore, we decided to proceed with this algorithm. 
 
 ## Robot infrastructure
 The detailed report on existing solutions could be found [here](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/reports/Report%232.md).
 
-The initial robot was designed to perform autonomous motion. To solve this task, it needs to firstly create a map (it's called mapping) and also localize himself inside it (it's called localization). As a result, the odometry of the robot is obtained.
+The initial robot was designed to perform autonomous motion. To solve this task, it needs to firstly create a map (it's called mapping) and also localize itself inside it (it's called localization). As a result, the odometry of the robot is obtained.
 <center>
     <figure>
     <img src="img/system_pipeline.png" width=1000 alt="my alt text"/>
@@ -63,7 +63,7 @@ The performance optimization turned out to be quite simple, and consisted of two
     </figure>
 </center>
 
-2. **Parameter tuning.** The human detection algorithm has many different parameters. Meanwhile most of them were great out-of-box, we decided to change the parameters responsible for downsampling and resolution so that they produce less load on the system.
+2. **Parameter tuning.** The human detection algorithm has many different parameters. Meanwhile most of them were effective out-of-box, we decided to change the parameters responsible for downsampling and resolution so that they produce less load on the system.
    
 ## Evaluation on the dataset
 ### The datasest
