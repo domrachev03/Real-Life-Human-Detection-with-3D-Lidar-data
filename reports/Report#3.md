@@ -4,9 +4,10 @@ The project ([github](](https://github.com/domrachev03/Real-Life-Human-Detection
 MD [report](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/Report%233.md) with images and gifs.
 
 **Project Participants**
-1. Domraсhev Ivan, i.domrachev@innopolis.university.
-2. Eremov Artur, a.eremov@innopolis.university. 
-3. Kiselyov Ivan, i.kiselyov@innopolis.university
+1. Domraсhev Ivan, i.domrachev@innopolis.university. ROS & Detection developer
+2. Eremov Artur, a.eremov@innopolis.university.      Detection & Simulation developer
+3. Kiselyov Ivan, i.kiselyov@innopolis.universit.    Scripts & Detection developer.
+
 
 # Overview of project timeline
 - Investigate the existing solutions for real-time human detection based on lidar data.
@@ -81,26 +82,42 @@ However, there are two issues with such approach:
 
 On top of that, we didn't have enough time with robot to collect enough data. Summing this up, we decided to collect only two data entries: one with one person, and another with two people.
 
+All the data we managed to collect could be found [here](https://drive.google.com/drive/folders/1oSeZWjjiLW-ZYMtTdAdhg11_YxoUQRsg?usp=sharing).
+
 ### Results
 We made two runs of the algorithm: locally on our machine, just to evaluate accuracy, and then on the robot itself.
 
-To make long things short, both runs were successful, and the robot managed to detect and track all the humans presented on the scene all the time.
+To make long things short, both runs were successful, and the robot managed to detect and track all the humans presented on the scene all the time. You can see the sample gifs below (or use the links: [one person](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/reports/img/OwnSimulator.gif), [two people](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/reports/img/FinalDetection.gif)) 
 
 <center>
     <figure>
     <img src="img/OwnSimulator.gif" width=600 alt="my alt text"/>
-    <figcaption>Human detection for one human scene. The robot clearly see the human.</figcaption>
+    <figcaption>Human detection for one human scene. The robot clearly see the human clearly.</figcaption>
     </figure>
 </center>
 
-To visualize the data from the robot, we modified [the simulator](https://github.com/ipipos56/Lidar-Simulator) and loaded the data there.
+<center>
+    <figure>
+    <img src="img/OwnSimulator.gif" width=600 alt="my alt text"/>
+    <figcaption>Human detection for several people. The network is tracking the furthest person. The data was collected from the robot and launched in the simulation later.</figcaption>
+    </figure>
+</center>
+
+> Note: to visualize data from the robot, we first recorded it and then launched on the modified version of [lidar data simulation](https://github.com/ipipos56/Lidar-Simulator). Unfortunately, due to agreement with robot owner, this data would not be shared publicly.
 
 As for the performance, the [Jetson Nano 8Gb](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) was able to run the algorithm at rate 5 Hz with SLAM and other algorithms running on the background and the average CPU load around 80-90%. This rate is considered sufficient, however it might be dropped lower by manipulating the parameters of the human detection algorithm. 
 
 > Note: despite using Jetson Nano 8 Gb, the algorithm still utilized only CPU power because of the implementation of the algorithm. Due to the nature of the solution, it does not run deep neural networks, so it would not benefit from transporting onto the GPU. However, this is still an open question
 
 # Summary
-...
-And we undestood that:
-1. It's definitely possible to run the human detection and tracking on the single board computer with online evaluation. We managed to do that at 5 Hz, and we do not state that this is the maximal rate one could achieve. However, we would be surprized, if someone would manage to launch it with at rate higher than 15 Hz with 95%+ accuracy.
-2. It's obvious that using Real Sense camera (either depth camera, or two fish eyes) would result in easier, faster and, probably, better solution (although non-360).
+During implementation of this project, our team:
+1. Investigated existing implementations algorithms for human detection based on lidar data. It turns out there are not so many, especially one integrated in the Robotics Operating System (ROS) middleware.
+2. Adapted existing software from the robot to be able to obtain data about its location, the map and lidar points. All the software was implemented using ROS.
+3. Made an attempt to collect the dataset from the robot. Attached the camera, made the script to collect the data, and recorded two sample scenes with one and two people.
+4. Adjusted the algorithm to make the algorithm faster. Considering the fact that the algorithm was already designed for online usage, this was not very challenging task.
+5. Run the algorithm on the collected data both in "simulation" (locally) and on the robot (but still using prerecorded datasets). In both cases the model succeeded in detecting all the people on the scene.
+
+The future improvements one might consider are:
+1. Run proper evaluation of the algorithm on the datasets like [KITTI](https://www.cvlibs.net/datasets/kitti) and/or others.
+2. Add the tracking task for the robot based on the tracking of chosen person (plan path to the chosen point, namely nearby the person).
+3. Try to optimize the model even further without drastic accuracy loss. Our team failed to find a way to speed up the computation further without loss of the accuracy.
