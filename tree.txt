@@ -1,0 +1,19 @@
+├── existing_models
+│   ├── datasets            # The ipynb scripts to setup the datasets
+│   │   ├── KITTI_dataset
+│   │   └── nuScenes_dataset
+│   └── LidarTracking3D     # ROS package for testing different solutions
+│       └── src             # Different examined packages
+│           ├── hdl_people_tracking               
+│           ├── hdl_people_tracking_dependencies
+│           ├── lidar_tracker_validation
+│           ├── LiDAR_Tracking_3D
+│           ├── multiple-object-tracking-lidar
+│           └── patchwork-plusplus-ros
+├── Lidar-Simulator         # The forked simulator of lidar data
+├── reports                 # The markdown reports with stages of project development 
+│   └── img                 # The reference images
+└── src                     # The ROS package for human detection
+    ├── agilex_scout_mini   # Package for connection to the robot
+    ├── human_detection     # Improved human detection algorithm
+    └── rosbag2video        # The package for handling dataset collection
