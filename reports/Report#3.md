@@ -1,7 +1,7 @@
-# Real Life Human Detection with 3D Lidar data
+# Real Time Human Detection with 3D Lidar data
 The project ([github](](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data.git))) is aimed to detect a human using data from the 3D lidar. The calculations would be performed in real time on a single board computer.
 
-MD [report](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/Report%233.md) with images and gifs.
+> Note. The report contains lots of gif files for better visualization. Therefore, we encorage to go through markdown version of the [report](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/Report%233.md).
 
 **Project Participants**
 1. Domraсhev Ivan, i.domrachev@innopolis.university. ROS & Detection developer
