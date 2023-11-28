@@ -65,8 +65,10 @@ The idea of the resulting algorithm is straightforward: the pointcloud is first 
 3. [PCL](https://pointclouds.org/), [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page)
 4. [fast_gicp](https://github.com/SMRT-AIST/fast_gicp/tree/6d99a9cfb211d87858921f3711141c36d6ea39c8), [hdl_global_localization](https://github.com/koide3/hdl_global_localization/tree/a69c16b1b89d700cd5283f6a89ac843d69c037cc), [hdl_localization](https://github.com/koide3/hdl_localization/tree/8ba183ca49a1d6b290d965d3852793287b31a9f4), [ndt_omp](https://github.com/koide3/ndt_omp/tree/0852c95360d1b0d29745e7eae7a57c0950de695b)
 
-## Usage
-1. Create and build ROS package
+## Installation
+> Note: the proper dependencies handling is in-progress task, for now this section assumes you've installed the deps manually
+
+All you need to install this repository is to initialize and compile ROS workspace:
 ```bash
 mkdir -p catkin_ws/src
 cd catkin_ws/src
@@ -75,19 +77,21 @@ cd ..
 catkin init 
 catkin build
 ```
-1. To run the sample problems using the benchmark datasets, run:
+
+## Usage
+To run the sample problems using the benchmark datasets, run:
 ```bash
 source devel/setup.{bash/zsh/...}
 roslaunch lidar_tracker_validation validate_tracker.launch model_name:={"kf_tracker/Track3D/kf_tracker"} rosbag_filename={rosbag_file.bag}
 ```
 for details, see [report #1](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lidar-data/blob/master/reports/Report%231.md)
 
-Note: the following instructions are written mainly for the given hardware setup.
-2. To record the rosbag from the robot, run:
+To record the rosbag from the robot, run:
 ```bash
 roslaunch human_detection record_with_camera.launch camera_fps:=10 record_rosbag:=true
 ```
-3. To launch the human detection on the robot, run:
+
+To launch the human detection on the robot, run:
 ```bash
 roslaunch human_detection human_detection.launch
 ```
