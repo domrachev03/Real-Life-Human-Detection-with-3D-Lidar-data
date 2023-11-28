@@ -1,0 +1,18 @@
+<launch>
+  <arg name="rosbag_file" default="rosbags_2023-10-22-19-10-43.bag"/>
+  <node pkg="rosbag" type="play" name="rosbag" required="true" args="$(find rosbag2video)/rosbags/$(arg rosbag_file)"/>
+  
+  <node name="left_camera" pkg="image_view" type="extract_images" respawn="false" output="screen">
+    <param name="filename_format" value="left_camera_%04d.jpg"/>
+    <remap from="image" to="/filtered/fisheye1/image_raw"/>
+  </node>
+
+  <node name="right_camera" pkg="image_view" type="extract_images" respawn="false" output="screen">
+    <param name="filename_format" value="right_camera_%04d.jpg"/>
+    <remap from="image" to="/filtered/fisheye2/image_raw"/>
+  </node>
+
+  <node name="pointcloud_to_file" pkg="pcl_ros" type="pointcloud_to_pcd">
+    <remap from="input" to="/filtered/velodyne_points"/>
+  </node>
+</launch>
