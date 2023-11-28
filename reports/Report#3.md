@@ -71,7 +71,7 @@ To evaluate the performance of the model, the test data was collected from the r
 
 <center>
     <figure>
-    <img src="img/ShowDataset.gif" width=600 alt="my alt text"/>
+    <img src="img/FinalDetection.gif" width=600 alt="my alt text"/>
     <figcaption>The dataset (the update rate is slowed by a factor of 40) with two people in the frame.</figcaption>
     </figure>
 </center>
@@ -98,7 +98,7 @@ To make long things short, both runs were successful, and the robot managed to d
 
 <center>
     <figure>
-    <img src="img/OwnSimulator.gif" width=600 alt="my alt text"/>
+    <img src="img/FinalDetection.gif" width=600 alt="my alt text"/>
     <figcaption>Human detection for several people. The network is tracking the furthest person. The data was collected from the robot and launched in the simulation later.</figcaption>
     </figure>
 </center>
