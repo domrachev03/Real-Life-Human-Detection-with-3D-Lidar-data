@@ -14,7 +14,6 @@ MD [report](https://github.com/domrachev03/Real-Life-Human-Detection-with-3D-Lid
 - Test the model, and further train/teach our model for this task
 - Deploy everything on the robot, optimize for memory and performance
 
-
 ### Find the simulator for visualizing our dataset
 #### Overview
 The task was aimed at finding the simple simulator for visualizing dataset or creating this simulator
