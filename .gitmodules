@@ -22,3 +22,6 @@
 [submodule "existing_models/LidarTracking3D/src/hdl_people_tracking_dependencies/hdl_global_localization"]
 	path = existing_models/LidarTracking3D/src/hdl_people_tracking_dependencies/hdl_global_localization
 	url = https://github.com/koide3/hdl_global_localization
+[submodule "Lidar-Simulator"]
+	path = Lidar-Simulator
+	url = https://github.com/ipipos56/Lidar-Simulator
